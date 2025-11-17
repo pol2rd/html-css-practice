@@ -86,3 +86,7 @@ article input[type=button] {
     color: white;
     font-weight: 700;
 }
+
+article input[type=button]:hover {
+    background-color: hsl(4, 100%, 67%);
+}
