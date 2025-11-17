@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link type="text/css" href="./desktop-design.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   
   <title>Frontend Mentor | Newsletter sign-up form with success message</title>
 
@@ -17,33 +21,47 @@
 <body>
 
   <!-- Sign-up form start -->
-
-  Stay updated!
-
-  Join 60,000+ product managers receiving monthly updates on:
-
-  Product discovery and building what matters
-  Measuring to ensure updates are a success
-  And much more!
-
-  Email address
-  email@company.com
-
+  <article>
+    <img src="assets\images\illustration-sign-up-desktop.svg">
+    <main>
+      <div class="article-content">
+        <h1>Stay updated!</h1>
+        <p>Join 60,000+ product managers recieving monthly updates on:</p>
+        <div class="bullet-point">
+          <img src="./assets/images/icon-success.svg">
+          <p>Product discovery and building what matters</p>
+        </div>
+        <div class="bullet-point">
+          <img src="./assets/images/icon-success.svg">
+          <p>Measuring to ensure updates are a success</p>
+        </div>
+        <div class="bullet-point">
+          <img src="./assets/images/icon-success.svg">
+          <p>And much more!</p>
+        </div>
+      </div>
+      <form>
+         <label for="email-address">Email address</label>
+         <input type="text" id="email-address" name="email-address" value="email@company.com">
+         <input type="button" value="Subscribe to monthly newsletter">
+      </form>
+    </main>
+  </article>
+<!-- 
   Subscribe to monthly newsletter
 
-  <!-- Sign-up form end -->
+ Sign-up form end -->
 
   <!-- Success message start -->
 
-  Thanks for subscribing!
+  <!-- Thanks for subscribing!
 
   A confirmation email has been sent to ash@loremcompany.com. 
   Please open it and click the button inside to confirm your subscription.
 
   Dismiss message
 
-  <!-- Success message end -->
-  
+  Success message end --> 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Liron</a>.
