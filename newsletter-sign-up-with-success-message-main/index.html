@@ -8,6 +8,7 @@
   <link type="text/css" href="./subscribe-page-design.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script src="./function.js" defer></script>
   <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   
   <title>Frontend Mentor | Newsletter sign-up form with success message</title>
@@ -20,10 +21,10 @@
 </head>
 <body>
 
-  <!-- Sign-up form start -->
-  <article>
+  <article class="subscribe-form">
     <picture>
-      <source media="(max-width:600px)" srcset="assets\images\illustration-sign-up-mobile.svg">
+      <source media="(max-width:375px)" srcset="assets\images\illustration-sign-up-mobile.svg">
+      <source media="(max-width:528px)" srcset="assets\images\illustration-sign-up-tablet.svg">
       <img src="assets/images/illustration-sign-up-desktop.svg">
     </picture>
     <main>
@@ -43,26 +44,25 @@
              And much more fun!
         </p>
       </div>
-      <form>
+      <form onsubmit="send(event)">
          <label for="email-address">Email address</label>
-         <input type="text" id="email-address" name="email-address" placeholder="email@company.com">
-         <input type="button" value="Subscribe to monthly newsletter">
+         <input type="text" id="email-address" name="email-address" placeholder="email@company.com" required>
+         <input type="submit" value="Subscribe to monthly newsletter">
       </form>
     </main>
   </article>
-<!-- 
- Sign-up form end -->
 
   <!-- Success message start -->
-    
-  <!-- Thanks for subscribing!
-
-  A confirmation email has been sent to ash@loremcompany.com. 
-  Please open it and click the button inside to confirm your subscription.
-
-  Dismiss message
-
-  Success message end --> 
+   <article class="subscribe-success">
+       <header>
+          <img src="./assets/images/icon-success.svg" class="success-icon">
+       </header>
+       <h1>Thanks for subscribing!</h1>
+       <p>A confirmation email has been sent to <b></b>. 
+          Please open it and click the button inside to confirm your subscription.</p>
+          <input type="button" value="Dismiss message">
+   </article>
+  <!-- Success message end -->
   <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Liron</a>.
