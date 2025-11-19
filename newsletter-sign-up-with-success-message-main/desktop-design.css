@@ -1,5 +1,8 @@
 html {
-    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 
 body {
@@ -8,19 +11,24 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+   
     font-family: "Roboto", sans-serif;
 }
 
 @media(min-width: 600px) {
     article {
         max-height: 400px;
+        max-width: 700px;
         flex-direction: row-reverse;
         justify-content: space-around;
         border-radius: 25px;
-        padding-bottom: 15px;
-        padding-top: 15px;
+        padding: 20px;
         padding-left: 30px;
+    }
+    article picture {
+        max-width: 300px;
+        display: flex;
+        justify-content: end;
     }
     article img {
         height: 100%;
@@ -28,7 +36,10 @@ body {
     article main {
         flex-direction: column;
         justify-content: center;
-        width: 50%;
+       padding-left: 15px;
+       padding-top: 15px;
+       width: 50%;
+       height: 50%;
     }
     .article-content {
         gap: 10px;
@@ -39,7 +50,7 @@ body {
     }
 
     .bullet-point {
-        gap: 20px;
+        gap: 10px;
         margin-bottom: -25px;
         align-items: baseline;
     }
@@ -108,6 +119,7 @@ article {
     background-color: hsl(0, 0%, 100%);
     color: hsl(234, 29%, 20%);
     font-size: 15px;
+    font-weight: 400;
 }
 
 article main {
