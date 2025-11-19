@@ -90,14 +90,6 @@ body {
         border-bottom-left-radius: 20px;
         border-bottom-right-radius: 20px;
     }
-    .bullet-point img {
-        width: 20px;
-    }
-    .bullet-point {
-        margin-bottom: -20px;
-        gap: 15px;
-        align-items: center;
-    }
     article input {
         height: 50px;
         margin-top: 10px;
@@ -109,10 +101,12 @@ body {
 
 }
 
-.bullet-point {
-        display: flex;
+.success-icon {
+    float: left; 
+    width: 20px; 
+    height: 20px; 
+    margin-right: 10px;
 }
-
 
 article {
     display: flex;
