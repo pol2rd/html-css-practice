@@ -49,6 +49,15 @@ body {
         padding-bottom: 20px;
         max-width: 350px;;
     }
+    .subscribe-success.active {
+        max-width: 340px;
+        height: 350px;
+        border-radius: 7%;
+        padding: 50px;
+    }
+    .subscribe-success.active input[type=button] {
+        margin-top: 20px;
+    }
 }
 
 @media(max-width: 528px) {
@@ -65,7 +74,6 @@ body {
         padding: 30px;
     }
     .subscribe-form form {
-        /* margin-top: 20px; */
         padding-left: 30px;
         padding-right: 30px;
         padding-bottom: 30px;
@@ -79,7 +87,17 @@ body {
         margin-top: 25px;
         height: 50px;
     }
-
+    .subscribe-success.active {
+       height: 90%;
+       width: 90%;
+       padding: 10%;
+    }
+    .subscribe-success.active header {
+      margin-top: 40%;
+    }
+    .subscribe-success.active input {
+        margin-top: 90%;
+    }
 }
 
 .subscribe-form .success-icon {
@@ -138,8 +156,25 @@ input[type=submit], input[type=button] {
     border: none;
 }
 
-input[type=text] {
+input[type=email] {
     color: hsl(234, 29%, 20%);
+}
+
+input[type=email]:invalid {
+    border-color: hsl(4, 100%, 67%);
+}
+
+.invalid-email-label:invalid {
+    color: hsl(4, 100%, 67%);
+}
+
+.invalid-email-label {
+    color: hsl(0, 0%, 100%);
+}
+
+.labels {
+    display: flex;
+    justify-content: space-between;
 }
 
 input[type=submit]:hover, input[type=button]:hover {
@@ -161,10 +196,6 @@ input[type=submit]:hover, input[type=button]:hover {
     color: hsl(234, 29%, 20%);
     font-size: 15px;
     font-weight: 400;
-    max-width: 340px;
-    height: 350px;
-    border-radius: 7%;
-    padding: 50px;
 }
 
 .subscribe-success.active h1 {
@@ -181,5 +212,4 @@ input[type=submit]:hover, input[type=button]:hover {
 
 .subscribe-success.active input[type=button] {
     height: 50px;
-    margin-top: 20px;
 }

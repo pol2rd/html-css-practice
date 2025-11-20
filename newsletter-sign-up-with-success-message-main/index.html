@@ -45,8 +45,11 @@
         </p>
       </div>
       <form onsubmit="send(event)">
-         <label for="email-address">Email address</label>
-         <input type="text" id="email-address" name="email-address" placeholder="email@company.com" required>
+         <div class="labels">
+          <label for="email-address">Email address</label>
+          <label class="invalid-email-label" for="email-address">valid email required</label>
+         </div>
+         <input type="email" id="email-address" name="email-address" placeholder="email@company.com" required>
          <input type="submit" value="Subscribe to monthly newsletter">
       </form>
     </main>
