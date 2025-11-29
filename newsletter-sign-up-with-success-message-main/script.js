@@ -12,7 +12,7 @@ function send(event) {
 
 function invalidEmail() {
     const emailInput = document.getElementById("email-address");
-    const invalidEmailLabel = document.getElementsByClassName("invalid-email-label")[0];
+    const invalidEmailLabel = document.querySelector(".invalid-email-label");
     emailInput.classList.add("invalid");
     invalidEmailLabel.classList.add("invalid");
 }
