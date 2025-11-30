@@ -1,29 +1,37 @@
-html {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+@font-face {
+    font-family:Roboto ;
+    src: url(./assets/fonts/Roboto-Regular.ttf);
 }
 
-body {
-    background-color: hsl(235, 18%, 26%);
+:root {
+    --primary-bg-color: hsl(235, 18%, 26%);
+    --primary-color: hsl(234, 29%, 20%);
+    --hover-button-color: hsl(4, 100%, 67%);
+    --form-bg-color: hsl(0, 0%, 100%);
+    --form-input-color: hsl(0, 0%,58%);
+}
+
+html, body {
+    background-color: var(--primary-bg-color);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     font-family: "Roboto", sans-serif;
+    min-height: 100vh;
+    height: 100%;
 }
 
 @media(min-width: 529px) {
     .subscribe-form {
-        max-height: 400px;
-        max-width: 800px;
+        max-height: 25rem;
+        max-width: 50rem;
         flex-direction: row-reverse;
         justify-content: space-between;
-        border-radius: 25px;
-        padding: 20px;
-        padding-left: 30px;
-        gap: 30px;
+        border-radius: 1.5rem;
+        padding: 1.25rem;
+        padding-left: 2rem;
+        gap: 2rem;
     }
     .subscribe-form picture {
         max-width: 300px;
@@ -33,8 +41,8 @@ body {
     .subscribe-form main {
         flex-direction: column;
         justify-content: center;
-       padding-left: 15px;
-       padding-top: 15px;
+       padding-left: 1rem;
+       padding-top: 1rem;
        max-height: 370px;
     }
     .article-content {
@@ -42,72 +50,62 @@ body {
     }
 
     .subscribe-form form {
-        margin-top: 20px;
-        padding-bottom: 20px;
+        margin-top: 1rem;
+        padding-bottom: 1rem;
         max-width: 350px;;
     }
     .subscribe-success.active {
         max-width: 340px;
         height: 350px;
-        border-radius: 7%;
-        padding: 50px;
-    }
-    .subscribe-success.active input[type=button] {
-        margin-top: 20px;
+        border-radius: 1.5rem;
+        padding: 3rem;
     }
 }
 
 @media(max-width: 528px) {
     .subscribe-form {
         height: 100%;
-        width: 100%;
         flex-direction: column;
-        padding-bottom: 15px;
+        padding-bottom: 1rem;
     }
     .subscribe-form main {
         flex-direction: column;
     }
     .article-content {
-        padding: 30px;
+        padding: 2rem;
     }
     .subscribe-form form {
-        padding-left: 30px;
-        padding-right: 30px;
-        padding-bottom: 30px;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        padding-bottom: 2rem;
     }
     .subscribe-form picture {
         object-fit: cover;
-        border-bottom-left-radius: 20px;
-        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
     }
     article input[type=submit] {
-        margin-top: 25px;
-        height: 50px;
+        margin-top: 1.5rem;
     }
     .subscribe-success.active {
        height: 90%;
        width: 90%;
        padding: 10%;
     }
-    .subscribe-success.active header {
-      margin-top: 40%;
-    }
-    .subscribe-success.active input {
-        margin-top: 90%;
-    }
 }
 
 .subscribe-form .icon-list {
     float: left; 
-    margin-right: 10px;
+    margin-right: 0.5rem;
 }
 
 .subscribe-form {
     display: flex;
-    background-color: hsl(0, 0%, 100%);
-    color: hsl(234, 29%, 20%);
-    font-size: 15px;
+    background-color: var(--form-bg-color);
+    color: var(--primary-color);
+    font-size: 1rem;
     font-weight: 400;
+    margin: 0 auto;
 }
 
 .subscribe-form main {
@@ -116,8 +114,8 @@ body {
 
 .subscribe-form main h1 {
     font-weight: 700;
-    font-size: 40px;
-    line-height: 30px;
+    font-size: 2.5rem;
+    line-height: 2rem;
     position: relative;
 }
 
@@ -128,43 +126,41 @@ body {
 
 .subscribe-form label {
     font-weight: 700;
-    font-size: 12px;
+    font-size: 0.75rem;
 }
 
 input {
-    border-radius: 5px;
-    border-width: 0.5px;
-    border-color: hsl(0, 0%,58%);
-    border-width: 0.5px;
-    color: hsl(0, 0%,58%);
-    height: 40px;
-    margin-top: 10px;
-    border-width: 0.5px;
+    border-radius: 0.3rem;
+    border-width: 0.05rem;
+    border-color: var(--form-input-color);
+    color: var(--form-input-color);
+    margin-top: 0.5rem;
     outline: 0;
+    height: 2rem
 }
 
 input[type=submit], input[type=button] {
-    background-color: hsl(234, 29%, 20%);
+    background-color: var(--primary-color);
     text-align: center;
-    color: white;
+    color: var(--form-bg-color);
     font-weight: 700;
     border: none;
 }
 
 input[type=email] {
-    color: hsl(234, 29%, 20%);
+    color: var(--primary-color);
 }
 
 #email-address.invalid {
-    border-color: hsl(4, 100%, 67%);
+    border-color: var(--hover-button-color);
 }
 
 .invalid-email-label.invalid {
-    color: hsl(4, 100%, 67%);
+    color: var(--hover-button-color);
 }
 
 .invalid-email-label {
-    color: hsl(0, 0%, 100%);
+    color: var(--form-bg-color);;
 }
 
 .labels {
@@ -173,31 +169,29 @@ input[type=email] {
 }
 
 input[type=submit]:hover, input[type=button]:hover {
-    background-color: hsl(4, 100%, 67%);
+    background-color: var(--hover-button-color);
 }
 
 .subscribe-form.active{
         display: none;
 }
 
-.subscribe-success{
+.subscribe-success {
     display: none;
 }
 
 .subscribe-success.active {
     display: flex;
     flex-direction: column;
-    background-color: hsl(0, 0%, 100%);
-    color: hsl(234, 29%, 20%);
-    font-size: 15px;
+    background-color: var(--form-bg-color);
+    color: var(--primary-color);
+    font-size: 1rem;
     font-weight: 400;
 }
 
 .subscribe-success.active h1 {
     font-weight: 800;
     font-size: 3em;
-    line-height: 1.1;
-
 }
 
 .subscribe-success.active p {
@@ -207,4 +201,5 @@ input[type=submit]:hover, input[type=button]:hover {
 
 .subscribe-success.active input[type=button] {
     height: 50px;
+    margin-top: auto;
 }
